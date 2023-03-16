@@ -1,0 +1,131 @@
+.tenweb{
+    font-size: 100px;
+    text-align: center;
+}
+.menu1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.a1{
+    margin: 10px;
+    list-style-type: none;
+}
+.lienket{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.lienket:hover{
+    color: plum;
+}
+.review{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.re1{
+    margin: 10px;
+    opacity: 0.5;
+}
+.re2{
+    justify-content: center;
+    word-wrap: break-word;
+    margin-top: 0px;
+}
+.con2{
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    width: 400px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+}
+.con3{
+    display: block;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    flex-wrap: wrap;
+    width: 900px;
+    margin-left: 10px;
+}
+.a2{
+    list-style-type: none;
+    color: aqua;
+    margin-top: 10px;
+}
+.con4{
+    display: block;
+    width: 300px;
+
+}
+.img1{
+    width: 400px;
+    height: 300px;
+}
+.re3{
+    display: block;
+    margin-top: 10px;
+    background-color: rgb(49, 49, 163);
+    color: white;
+}
+.a4{
+    padding: 0px;
+}
+.a2:hover{
+    color: plum;
+}
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: black;
+    padding-top: 10px;
+}
+.textfooter{
+    color: white;
+}
+.con5{
+    width: 900px;
+    margin-left: 10px;
+}
+.con6{
+    display: flex;
+}
+.con7{
+    margin: 10px;
+    opacity: 0.7;
+}
+.thu1{
+    width: 200px;
+    height: 20px;
+}
+.thu{
+    width: 655px;
+    height: 200px;
+}
+.btn{
+    color: white;
+    background-color: rgb(34, 34, 164);
+}
+.con8{
+    width: 900px;
+    margin-left: 10px;
+}
+
+.lienket1{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.lienket1:hover{
+    color: plum;
+}
