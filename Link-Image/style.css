@@ -132,22 +132,8 @@ body {
   right: 20px;
   position: fixed;
 }
-
-/* .anh1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .ve{
-  width: 60px;
-  height: 60px;
-  background-color: #1F568B;
-} */
-
-.bang{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.anhsp1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
