@@ -1,0 +1,28 @@
+CREATE TABLE tbl_sinhvien (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	ten varchar(255) NOT NULL,
+	tuoi int,
+	gioiTinh int,
+	maLop int
+);
+
+CREATE TABLE tbl_giaovien (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	ten varchar(255) NOT NULL,
+	tuoi int,
+	gioiTinh int,
+	soNamKN int
+);
+CREATE TABLE tbl_diem (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	maSinhVien int NOT NULL,
+	diemToan float,
+	diemLy float,
+	diemHoa float
+);
+
+INSERT INTO tbl_sinhvien(ten, tuoi, gioiTinh, maLop) VALUES ('Lương Hoàng Long', '23', '1', '10'), ('Nguyễn Văn Duy', '23', '1', '11'), ('Nguyễn Văn Vinh', '23', '1', '11'), ('Nguyễn Văn Hiếu', '23', '1', '11'), ('Lương Văn Duy', '23', '1', '11'), ('Nguyễn Anh Duy', '23', '1', '11'), ('Nguyễn Văn Anh', '23', '1', '11'), ('Nguyễn Duy Anh', '23', '1', '11'), ('Nguyễn Văn Long', '23', '1', '11'), ('Nguyễn Duy Long', '23', '1', '11');
+
+INSERT INTO tbl_giaovien(ten, tuoi, gioiTinh, soNamKN) VALUES ('Lương Hoàng Long', '23', '1', '10'), ('Nguyễn Văn Duy', '23', '1', '11'), ('Nguyễn Văn Vinh', '23', '1', '11'), ('Nguyễn Văn Hiếu', '23', '1', '11'), ('Lương Văn Duy', '23', '1', '11'), ('Nguyễn Anh Duy', '23', '1', '11'), ('Nguyễn Văn Anh', '23', '1', '11'), ('Nguyễn Duy Anh', '23', '1', '11'), ('Nguyễn Văn Long', '23', '1', '11'), ('Nguyễn Duy Long', '23', '1', '11');
+
+INSERT INTO tbl_diem(maSinhVien, diemToan, diemLy, diemHoa) VALUES ('1', '9', '9,5', '10'), ('2','10', '10', '9,5'),('3', '9', '9,5', '10'), ('4','10', '10', '9,5'),('5', '9', '9,5', '10'), ('6','10', '10', '9,5'),('7', '9', '9,5', '10'), ('8','10', '10', '9,5'),('9', '9', '9,5', '10'), ('10','10', '10', '9,5');
