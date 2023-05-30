@@ -1,0 +1,60 @@
+CREATE TABLE tbl_sinhvien (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	ten varchar(255) NOT NULL,
+	tuoi int,
+	gioiTinh int,
+	maLop int
+);
+
+CREATE TABLE tbl_giaovien (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	ten varchar(255) NOT NULL,
+	tuoi int,
+	gioiTinh int,
+	soNamKN int
+);
+CREATE TABLE tbl_diem (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	maSinhVien int NOT NULL,
+	diemToan float,
+	diemLy float,
+	diemHoa float
+);
+
+INSERT INTO tbl_sinhvien(ten, tuoi, gioiTinh, maLop) VALUES ('Lương Hoàng Long', '23', '1', '10'), ('Nguyễn Văn Duy', '23', '1', '11'), ('Nguyễn Văn Vinh', '23', '1', '11'), ('Nguyễn Văn Hiếu', '23', '1', '11'), ('Lương Văn Duy', '23', '1', '11'), ('Nguyễn Anh Duy', '23', '1', '11'), ('Nguyễn Văn Anh', '23', '1', '11'), ('Nguyễn Duy Anh', '23', '1', '11'), ('Nguyễn Văn Long', '23', '1', '11'), ('Nguyễn Duy Long', '23', '1', '11');
+
+INSERT INTO tbl_giaovien(ten, tuoi, gioiTinh, soNamKN) VALUES ('Lương Hoàng Long', '23', '1', '10'), ('Nguyễn Văn Duy', '23', '1', '11'), ('Nguyễn Văn Vinh', '23', '1', '11'), ('Nguyễn Văn Hiếu', '23', '1', '11'), ('Lương Văn Duy', '23', '1', '11'), ('Nguyễn Anh Duy', '23', '1', '11'), ('Nguyễn Văn Anh', '23', '1', '11'), ('Nguyễn Duy Anh', '23', '1', '11'), ('Nguyễn Văn Long', '23', '1', '11'), ('Nguyễn Duy Long', '23', '1', '11');
+
+INSERT INTO tbl_diem(maSinhVien, diemToan, diemLy, diemHoa) VALUES ('1', '9', '9,5', '10'), ('2','10', '10', '9,5'),('3', '9', '9,5', '10'), ('4','10', '10', '9,5'),('5', '9', '9,5', '10'), ('6','10', '10', '9,5'),('7', '9', '9,5', '10'), ('8','10', '10', '9,5'),('9', '9', '9,5', '10'), ('10','10', '10', '9,5');
+
+//Lấy tên giáo viên dạy môn 'Toán'.
+SELECT tbl_giaovien.ten FROM tbl_giaovien JOIN tbl_lop ON tbl_giaovien.id = tbl_lop.giaovien_id WHERE tbl_lop.tenLop = 'Toán';
+//Lấy tất cả thông tin các giáo viên dạy môn học >2 tín chỉ.
+SELECT tbl_giaovien.*, tbl_lop.tenLop FROM tbl_giaovien JOIN tbl_lop ON tbl_giaovien.id = tbl_lop.giaovien_id 
+WHERE tbl_lop.soTinChi > 2;
+//Xem thầy 'Hoàng Văn u' dạy lớp gì
+SELECT tbl_lop.* FROM tbl_lop JOIN tbl_giaovien ON tbl_lop.giaovien_id = tbl_giaovien.id WHERE tbl_giaovien.ten = 'Hoàng Văn U';
+
+
+
+Bài tập buổi 3:
+câu 1:
+SELECT tbl_giangvien.maGV, tbl_giangvien.tenGV, tbl_giangvien.maKhoa FROM tbl_giangvien;
+câu 2:
+SELECT tbl_giangvien.maGV, tbl_giangvien.tenGV, tbl_giangvien.maKhoa FROM tbl_giangvien WHERE tbl_giangvien.maKhoa = 'Geo';
+câu 3:
+SELECT COUNT(*) FROM tbl_sinhvien WHERE maKhoa = 'CNTT';
+câu 4:
+SELECT maSV, tenSV, namSinh FROM tbl_sinhvien WHERE maKhoa = 'Math';
+câu 5:
+SELECT COUNT(*) FROM tbl_giangvien WHERE maKhoa = 'CNTT';
+câu 7:
+SELECT tbl_khoa.maKhoa, tbl_khoa.tenKhoa, COUNT(*)
+FROM tbl_khoa
+INNER JOIN tbl_giangvien ON tbl_khoa.maKhoa = tbl_giangvien.maKhoa
+GROUP BY tbl_khoa.maKhoa, tbl_khoa.tenKhoa;
+câu 8:
+SELECT tbl_khoa.sdt
+FROM tbl_sinhvien
+INNER JOIN tbl_khoa ON tbl_sinhvien.maKhoa = tbl_khoa.maKhoa
+WHERE tbl_sinhvien.tenSV = 'Bui Xuan Duc';
